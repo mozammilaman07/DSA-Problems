@@ -28,7 +28,7 @@ int main()
     cout << "Printing the char array : " << ch << endl;
 
     cout << "size of string by functon : " << length << endl;
-    cout << "size of string : " << strlen(ch) << endl;
+    // cout << "size of string : " << strlen(ch) << endl;
 
     //     for (int i = 0; i < 15; i++)
     //     {
