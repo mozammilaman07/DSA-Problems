@@ -2,14 +2,28 @@
 #include <string.h>
 using namespace std;
 
+int findLength(char ch[], int size)
+{
+    int len = 0;
+    int index = 0;
+    while (ch[index] != '\0')
+    {
+        len++;
+        index++;
+    }
+    return len;
+}
+
 int main()
 {
 
     char ch[20];
     cin.getline(ch, 20);
+    int length = findLength(ch, 20);
 
     cout << "Printing the char array : " << ch << endl;
-    cout << "Printing the char array length : " << strlen(ch) << endl;
+    // cout << "Printing the char array length : " << strlen(ch) << endl;
+    cout << "printing the array using function : " << length << endl;
 }
 
 // #include <iostream>
