@@ -1,27 +1,26 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
 
-void convertToUpperCase(char ch[], int size)
+void convertToUpperCase(char ch[], int len)
 {
     int i = 0;
     while (ch[i] != '\0')
     {
-        char currChar = ch[i];
-        if (currChar >= 'a' && currChar <= 'z')
+        if (ch[i] >= 'a' && ch[i] <= 'z')
         {
-            ch[i] = currChar - 'a' + 'A';
+            ch[i] = ch[i] - 'a' + 'A';
         }
         i++;
     }
 }
-
 int main()
 {
-    char ch[20];
-    int size = 20;
-    cin.getline(ch, 20);
-    cout << "original : " << ch << endl;
+    char ch[100];
+    cin.getline(ch, 100);
+    cout << "Before " << ch << endl;
+    int len = strlen(ch);
 
-    convertToUpperCase(ch, size);
-    cout << "after converting " << ch << endl;
+    convertToUpperCase(ch, len);
+    cout << "After " << ch << endl;
 }
