@@ -2,15 +2,14 @@
 #include <string.h>
 using namespace std;
 
-void replaceCharacter(char ch[], int size)
+void replaceChar(char ch[], int len)
 {
     int i = 0;
     while (ch[i] != '\0')
     {
-        char curr = ch[i];
-        if (curr == '@')
+        if (ch[i] == '@')
         {
-            curr = ' ';
+            ch[i] = ' ';
         }
         i++;
     }
@@ -18,10 +17,11 @@ void replaceCharacter(char ch[], int size)
 
 int main()
 {
-    char ch[50];
-    int size = 50;
-    cin.getline(ch, size);
-    cout << "before " << ch << endl;
-    replaceCharacter(ch, size);
-    cout << "after " << ch << endl;
+    char ch[100];
+    cin.getline(ch, 100);
+    cout << "Before " << ch << endl;
+
+    int len = strlen(ch);
+    replaceChar(ch, len);
+    cout << "After " << ch << endl;
 }
