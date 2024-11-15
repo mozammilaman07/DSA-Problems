@@ -5,6 +5,24 @@ using namespace std;
 
 void rotateArr(int arr[], int n, int k)
 {
+
+    k = k % n;
+
+    int ans[k];
+    for (int i = 0; i < k; i++)
+    {
+        ans[i] = arr[i];
+    }
+
+    for (int i = k; i < n; i++)
+    {
+        arr[i - k] = arr[i];
+    }
+
+    for (int i = n - k; i < n; i++)
+    {
+        arr[i] = ans[i - (n - k)];
+    }
 }
 
 int main()
